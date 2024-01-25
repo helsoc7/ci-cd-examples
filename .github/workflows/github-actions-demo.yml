@@ -20,3 +20,8 @@ jobs:
         run: npm run test
       - name: Build App
         run: npm run build
+      - name: Upload Build Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-artifact
+          path: ci-example/build/
